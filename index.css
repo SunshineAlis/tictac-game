@@ -1,0 +1,141 @@
+.body {
+    margin: 0;
+    background-color:#44aced;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    width: 850px;
+    padding: 10px;
+    background-color: #0039a6;
+    border: 2px solid #318CE7;
+    border-radius: 15px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    position: relative;
+}
+ 
+.slot {
+    width: calc((800px - 5px * 6) / 7);
+    height: calc((800px - 5px * 6) / 7);
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #318CE7;
+    box-sizing: border-box;
+    position: relative;
+}
+ 
+.disc {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: purple;
+    position: absolute; /* For the falling effect */
+    transition: top 0.5s ease-in; /* Smooth transition for the falling effect */
+}
+ 
+.redDisc {
+    border: 3px solid #AA0000;
+    background-color: #D2122E;
+}
+ 
+.yellowDisc {
+    background-color: #F0E68C;
+    border: 3px solid #FFFF00;
+}
+.red{
+    border: 3px solid #AA0000;
+    background-color: #D2122E;
+}
+.yellow{
+    background-color: #F0E68C;
+    border: 3px solid #FFFF00;
+}
+.emptySlot{
+    background-color: white;
+    border: 2px solid #318CE7;
+ 
+}
+ 
+/* Controls for selecting the discs */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.win-message {
+    color: black;
+    font-size: 24px;
+    font-family: Gill Sans, sans-serif;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+.controls div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+ 
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    top:70px;
+}
+ 
+ 
+ 
+ 
+.Title {
+    display: flex;
+    width: fit-content;
+    background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+    background-size: 200% 200%;
+    animation: anime 1s infinite alternate;
+}
+ 
+.Title_text {
+    font-size: 5rem;
+    font-family: Arial;
+    font-weight: 600;
+    color: #fff;
+ 
+}
+ 
+.h3 {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 24px;
+    color: #333;
+    top:50px;
+}
+@keyframes anime {
+    0% {
+        background-position: 0% 0%;
+    }
+ 
+    100% {
+        background-position: 100% 0%;
+    }
+}
+.reset_button {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #eeeea2;
+    border-color: #fff;
+    top:100%;
+
+ 
+}
